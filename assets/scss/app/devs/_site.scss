@@ -1,0 +1,127 @@
+/* app/devs/site */
+
+body {
+	min-width: 1076px;
+}
+/**
+ * Site specific layout
+ */
+.site__body {
+	background: url('../img/bg_search_border.png') 50% 88px repeat-x;
+	.inner {
+		@include group();
+		background: url('../img/bg_site_body.png') 286px 0% repeat-y;
+		max-width: 1170px;
+		margin: 0 auto;
+		padding: 0 20px;
+	}
+}
+.site__sidebar {
+	width: 266px;
+	float: left;
+}
+.site__main {
+	overflow: hidden;
+	background: $white;
+	border-left: 1px solid $global_border;
+}
+.main__content {
+	padding: 30px;
+}
+
+
+/**
+ * Articles
+ */
+.article {
+	blockquote {
+		margin: 0 30px 20px;
+		padding: 10px 20px;
+		border-left: 4px solid $success;
+		p {
+			font-size: 1.8em;
+
+			font-style: italic;
+			margin: 0;
+		}
+	}
+}
+.article__header__top {
+	@include group();
+	margin: 0 0 20px;
+}
+.article__tags {
+	float: left;
+	span {
+		margin: 0 10px 0 0;
+	}
+}
+.article__social {
+	float: right;
+	width: 138px;
+	padding: 10px 0px;
+}
+.article__meta {
+	@include group();
+	margin: 0 0 38px;
+	span {
+		display: block;
+		float: left;
+		padding: 1px 0px 1px 23px;
+		margin: 0 18px 0 0;
+		font-size: 1.2em;
+		color: $litestTextColour;
+		background-image: url('../img/sprite_icons.png');
+		background-repeat: no-repeat;
+	}
+	.date {
+		background-position: 0px -21px;
+	}
+	.author {
+		background-position: 0px -42px;
+	}
+}
+.article__img-featured {
+	@include boxShadow(0px 5px 5px -4px rgba(0, 0, 0, 0.3));
+	margin: 0 0 50px;
+	img {
+		@include borderRadius(5px);
+		display: block;
+	}
+}
+.article__footer {
+	border-top: 1px solid $globalHeader;
+}
+
+/**
+ * Site specific lists
+ */
+.list--summary {
+	@include resetList(0 0 5px 0, 0 0 5px 0);
+	border-bottom: 1px dotted $global_border;
+	li {
+		border-bottom: 1px solid $global_border;
+		&.last {
+			border-bottom: none;
+		}
+	}
+
+	a {
+		display: block;
+		padding: 20px 0px;
+	}
+
+	img {
+		float: left;
+		display: block;
+	}
+
+	p {
+		overflow: hidden;
+		padding: 0 0 0 15px;
+		margin: 0;
+		font-size: 1.4em;
+		color: $litestTextColour;
+	}
+
+}

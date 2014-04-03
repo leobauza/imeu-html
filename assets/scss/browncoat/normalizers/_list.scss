@@ -1,0 +1,144 @@
+/* browncoat/normalizers/list */
+
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+	margin-bottom:0;
+}
+ul, ol {
+	margin:0 0 20px; //under consideration
+	color: $textColour;
+}
+ul {
+	font-size: $listsFontSize;
+	padding:0 0 0 22px;
+	list-style:disc;
+	li {
+		line-height: $listsLineHeight;
+		margin:0 0 10px;
+		/*all nested*/
+		ul {
+			padding-top:10px;
+			font-size:100%;//makes all nested ul's be the same size
+			li {
+				
+			}
+		}
+		/*expert*/
+		&>ul {
+			&>li {
+				/*madness*/
+				&>ul {
+					&>li {
+						/*inception*/
+						&>ul {
+							background:Greyscale(9);
+							padding:20px 50px 10px;
+							margin-top:10px;
+							&>li {
+								
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+ol {
+	font-size: $listsFontSize;
+	padding:0 0 0 22px;
+	list-style:decimal;
+	li {
+		line-height: $listsLineHeight;
+		margin:0 0 10px;
+		/*all nested*/
+		ol {
+			padding-top:10px;
+			font-size:100%;//makes all nested ol's be the same size
+			li {
+				
+			}
+		}
+		/*expert*/
+		&>ol {
+			list-style:lower-latin;
+			&>li {
+				/*madness*/
+				&>ol {
+					list-style:lower-alpha;
+					&>li {
+						/*inception*/
+						&>ol {
+							list-style:katakana;
+							background:Greyscale(9);
+							padding:20px 50px 10px;
+							margin-top:10px;
+							&>li {
+								
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/*mixed*/
+ul {
+	ol {
+		padding-top:10px;
+		font-size:100%;
+	}
+}
+ol {
+	ul {
+		padding-top:10px;
+		font-size:100%;
+	}
+}
+
+/*modified*/
+.list--horizontal {
+	@include group();
+	@include resetList(0, 0);
+	li {
+		float: left;
+		margin: 0;
+	}
+	a {
+		display: block;
+	}
+}
+.list--social {
+	@extend .list--horizontal;
+	li {
+		margin: 0 0 0 24px;
+		&.first {
+			margin: 0;
+			a {
+				margin: 0;
+			}
+		}
+	}
+	a {
+		width: 20px;
+		height: 36px;
+		text-indent: -9999px;
+		background-image: url('../img/sprite_social_icons.png');
+		background-repeat: no-repeat;
+	}
+	
+}
+
+
+
+
+
+
+
+
+

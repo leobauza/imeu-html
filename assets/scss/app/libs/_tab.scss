@@ -1,0 +1,34 @@
+/* app/libs/tab */
+//move to tabs library later
+$tab_border_colour: #292a66;
+$tab_text_colour: #757575;
+
+.tabs {
+
+}
+.tabs__nav {
+	@include group();
+	border-bottom: 1px solid $tab_border_colour;
+	a {
+		@include borderRadius(5px 5px 0px 0px);
+		display: block;
+		width: 50%;
+		padding: 13px 0px;
+		float: left;
+		text-align: center;
+		color: $tab_text_colour;
+		font-size: 1.5em;
+		&.active {
+			background: $brand;
+			color: $white;
+		}
+	}
+}
+.tabs__content {
+}
+.tabs__tab {
+	display: none;
+	&.active {
+		display: block;
+	}
+}

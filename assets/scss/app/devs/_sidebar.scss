@@ -1,0 +1,41 @@
+/* app/devs/sidebar */
+
+$sidebar_padding: 25px 30px 25px 0px;
+
+.site__sidebar {
+	.form--search {
+		border-bottom: 1px solid $global_border;
+		padding: $sidebar_padding;
+		.placeholder {
+			display: none;
+		}
+		.form__group {
+			position: relative;
+			margin: 0;
+		}
+		button {
+			position: absolute;
+			top: 0;
+			right: 0;
+			background: url('../img/sprite_icons.png') 16px -274px no-repeat;
+			width: 45px;
+			height: 37px;
+			padding: 0;
+			margin: 0;
+			border: none;
+			text-indent: -9999px;
+		}
+	}
+
+	.tabs {
+		padding: $sidebar_padding;
+	}
+	
+	.btn--donate {
+		@extend .btn--success;
+		display: block;
+		text-transform: uppercase;
+		margin: 0 30px 40px 0px;
+	}
+
+}

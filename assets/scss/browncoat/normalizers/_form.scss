@@ -1,0 +1,254 @@
+/* browncoat/normalizers/form */
+
+$placeholder_colour: $litestTextColour;
+
+
+//form elements
+form {
+	label, input, textarea, select {
+		font-family: $globFamily;
+		font-size: 1.4em;
+		font-weight: normal;
+		line-height: 1.6em;
+		@extend %borderBox;
+	}
+
+	legend {
+		font-family: $globFamily;
+		font-size: 1.6em;
+		line-height: 1.8em;
+		width: 100%;
+		margin: 0 0 10px;
+		color: Greyscale(50);
+		@extend %borderBox;
+	}
+
+	label {
+		font-family: $globFamily;
+		display: block;
+		font-weight: 700;
+		margin: 0 0 5px 0;
+	}
+
+	select,
+	textarea,
+	input[type="text"],
+	input[type="password"],
+	input[type="email"] {
+		width: 100%;
+		height: 38px;
+		padding: 6px 10px;
+		//margin-bottom: 9px;
+		color: Greyscale(75);
+		margin-left:0;
+	}
+
+	textarea,
+	input[type="text"],
+	input[type="password"],
+	input[type="email"] {
+		background-color: $white;
+		border:1px solid $global_border;
+		@include borderRadius(5px);
+		//@include boxShadow(inset 0 1px 1px rgba(0, 0, 0, 0.5));
+		&:focus {
+			border:1px solid $focusBorder;
+			outline:0;
+			outline:thin dotted \9; /* IE6-9 */
+			@include boxShadow($formFocusShadow);
+		}
+	}
+
+	select {
+		background-color: $white;
+		border: 1px solid Greyscale();
+		height: 30px;
+		line-height: 30px;
+		@include borderRadius(5px);
+		&:focus {
+			border: 1px solid $focusBorder;
+			outline: 0;
+			outline: thin dotted \9; /* IE6-9 */
+			outline: 5px auto -webkit-focus-ring-color;
+			outline-offset: -2px;
+		}
+		&[multiple], &[size] {
+			height: auto;
+		}
+	}
+
+	input[type="text"], input[type="password"], input[type="email"]{
+		
+	}
+
+	input[type="file"] {
+		display: block;
+		width: 100%;
+	}
+
+	textarea {
+		height: auto;
+		overflow: auto; /*remove scrollbar in IE*/
+	}
+
+	button,
+	input[type="submit"] {
+		cursor: pointer;
+		&:hover{
+
+		}
+		&:focus {
+			border: 1px solid $focusBorder;
+			outline: 0;
+			outline: thin dotted \9; /* IE6-9 */
+			@include boxShadow($formFocusShadow);
+		}
+	}
+}
+
+
+//form groups
+fieldset {
+	border: none;
+	padding: 0;
+	margin: 0;
+}
+
+.form__collection {
+	background: Greyscale(5);
+	padding: 10px;
+	border: 1px solid Greyscale();
+	margin: 0 0 10px;
+}
+.form__group {
+	margin: 0 0 20px;
+}
+
+.form__text {
+	padding: 3px 0px;
+	margin: 0px;
+	font-size: 1.4em;
+	color: Greyscale(50);
+}
+
+%radio_checkbox {
+	margin: 0 0 20px;
+	label {
+		font-weight: normal;
+	}
+}
+.form__radios {
+	@extend %radio_checkbox;
+}
+.form__checkbox {
+	@extend %radio_checkbox;
+	label {
+		margin: 0;
+	}
+}
+
+//form modifiers
+.form--inline {
+	.form__group {
+		display: inline-block;
+		padding-right: 10px;
+	}
+	.form__checkbox {
+		display: inline-block;
+		padding-right: 10px;
+	}
+	button {
+		display: inline-block;
+	}
+}
+
+.form--horizontal {	
+	$formGutter: 2;
+	$formColumns: 12;
+
+	.form__group {
+		label {
+			padding-top: 5px;
+			text-align: right;
+		}
+		@include group();
+	}
+	.form__checkbox {
+		@include group();
+	}
+	
+	
+	[class*="span"] {
+		float:left;
+		margin-right: $formGutter * 1%;
+		&.l {
+			margin-right:0;
+		}
+		&:last-child {
+			margin-right:0;
+		}
+	}
+
+	@for $i from 1 through $columns {
+		$testColWidth: (99.9998 / $formColumns);
+
+		.span#{$i} {
+			$remainder: ($formGutter/$formColumns) * $i;
+			width: ($testColWidth * $i - $formGutter + $remainder) * 1%;
+		}
+	}
+	
+	
+	
+	
+}
+
+
+::-webkit-input-placeholder {
+	color: $placeholder_colour;
+}
+:-moz-placeholder { /* Firefox 18- */
+	color: $placeholder_colour;
+}
+::-moz-placeholder {  /* Firefox 19+ */
+	color: $placeholder_colour;
+}
+:-ms-input-placeholder {  
+	color: $placeholder_colour;
+}
+
+@media (max-width: 959px) {
+	
+	.form--horizontal {
+		.form__group {
+			label {
+				text-align: left;
+				padding: 0;
+			}
+		}
+		
+		[class*="span"] {
+			float: none;
+			width:auto;
+			margin-right: 0;
+		}
+
+		[class*="span"]:last-child {
+			overflow:auto;
+		}
+		
+		
+	}
+	
+	
+}
+
+
+
+
+
+
+
+
+
+

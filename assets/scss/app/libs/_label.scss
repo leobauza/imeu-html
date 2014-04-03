@@ -1,0 +1,16 @@
+/* app/libs/label */
+%label {
+  @include borderRadius(5px);
+  @include inlineBlock(32px);
+  padding: 10px 13px;
+  font-size: 15px;
+  border: 1px solid $global-border;
+  background: $white;
+}
+
+.label--default {
+  @extend %label;
+  background: $default;
+  border-color: $default;
+  color: $white;
+}

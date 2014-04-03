@@ -1,0 +1,88 @@
+/* app/libs/tile */
+$tile_title_colour: #58585a;
+$tile_label_colour: #232323;
+
+.tiles {
+	@include group();
+}
+.tiles--homepage {
+	padding: 30px 0px;
+}
+.tiles__tile {
+	display: block;
+	@include borderRadius(5px);
+	width: 273px;
+	border: 1px solid $global_border;
+	float: left;
+	margin: 0 0 25px 25px;
+}
+.tile__img {
+	position: relative;
+	img {
+		display: block;
+	}
+	.label {
+		@include borderRadius(5px);
+		position: absolute;
+		bottom: 14px;
+		left: 11px;
+		color: $tile_label_colour;
+		font-size: $textSize;
+		padding: 8px 12px;
+		background: $white;
+	}
+}
+.tile__body {
+	padding: 20px 25px;
+	.title {
+		color: $tile_title_colour;
+	}
+	p {
+		color: $litestTextColour;
+		font-size: 1.4em;
+		line-height: 1.5em;
+	}
+}
+.tile__post-time {
+	display: block;
+	padding: 1px 0 1px 22px;
+	background: url('../img/sprite_icons.png') 0px 0px no-repeat;
+	font-size: 1.2em;
+	color: $litestTextColour;
+}
+.tiles__nav {
+	ul {
+		@include resetList();
+		text-align: center;
+	}
+	li {
+		@include inlineBlock(20px);
+		margin: 0;
+	}
+	a {
+		display: block;
+		font-size: 1.5em;
+		line-height: 1;
+	}
+	span {
+		background-image: url('../img/sprite_icons.png');
+		background-repeat: no-repeat;
+		padding: 0px 15px;
+	}
+	.next {
+		a {
+			padding: 13px 20px 13px 10px;
+		}
+		span {
+			background-position: 100% -150px;
+		}
+	}
+	.prev {
+		a {
+			padding: 13px 10px 13px 20px;
+		}
+		span {
+			background-position: 0% -150px;
+		}
+	}
+}

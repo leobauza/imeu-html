@@ -1,0 +1,31 @@
+/* app/devs/header */
+.site__header {
+	background: $brand;
+}
+
+.header__top {
+	@include group();
+	background: $bg_top;
+}
+
+#brand {
+	float: left;
+	margin: 0;
+	padding: 20px 60px 20px 0px;
+	a, img {
+		display: block;
+	}
+	span {
+		display: none;
+	}
+}
+
+
+
+
+
+
+
+
+
+

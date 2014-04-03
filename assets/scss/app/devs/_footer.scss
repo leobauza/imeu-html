@@ -1,0 +1,102 @@
+/* app/devs/footer */
+
+//footer specific colours
+$footer_list_colour: #929292;
+$footer_list_lite_colour: #d4d5d7;
+$bg_footer: #3d3d3d;
+$bg_bottom: #58585a;
+
+//footer specific vars
+$footer_logo_space: 145px;
+$footer_padding: 40px 0px;
+
+.site__footer {
+	background: $bg_footer;
+}
+
+.footer__bottom {
+	background: $bg_bottom;
+}
+
+.footer__info {
+	float: left;
+	width: 75%;
+	padding: $footer_padding;
+}
+
+.footer__about {
+	@extend %borderBox;
+	color: $liteTextColour;
+	width: 90%;
+	margin-bottom: 30px;
+	padding-left: $footer_logo_space;
+	background: url('../img/logo_imeu_footer.png') 0% 6px no-repeat;
+}
+
+.footer__contact {
+	padding-left: $footer_logo_space;
+	li {
+		font-size: 1.3em;
+		line-height: 1;
+		padding: 0 6px 0 0;
+		margin: 0 6px 0 0;
+		color: $footer_list_colour;
+		border-right: 1px solid $footer_list_colour;
+		&.last {
+			border: none;
+		}
+	}
+	a {
+		color: $success;
+	}
+}
+
+.footer__nav--social {
+	padding: $footer_padding;
+	overflow: hidden;
+	.btn--success {
+		float: right;
+		width: 170px;
+	}
+	ul {
+		clear: both;
+		float: right;
+		a {
+			background-position: 0px -60px;
+			&.twitter {
+				background-position: 3px -60px;
+			}
+			&.fbook {
+				background-position: -33px -60px;
+			}
+			&.tumblr {
+				background-position: -69px -60px;
+			}
+			&.email {
+				background-position: -108px -60px;
+			}
+			&.rss {
+				background-position: -144px -60px;
+			}
+		}
+	}
+
+}
+
+.end-credits {
+	float: right;
+	li {
+		font-size: 1.2em;
+		color: $footer_list_lite_colour;
+		line-height: 1;
+		margin: 15px 0px 15px 7px;
+		padding: 0px 0px 0px 7px;
+		border-left: 1px solid $footer_list_lite_colour;
+		&.first {
+			border: none;
+		}
+	}
+	a {
+		color: $footer_list_lite_colour;
+	}
+}
