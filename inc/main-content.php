@@ -33,8 +33,8 @@
 	<p>The film explores universal themes that set the stage for its complex characters and unexpected storyline. "Three themes really compel any story -- every great piece of art explores in some way universal concepts of power, love and violence."</p>
 	<p>Trying to produce a film in Palestine provided its share of challenges. "Filming in Palestine, there was less to fall back on," says Zuaiter of the experience. "We were using investors' hard earned money and wanted to make something that people would be proud of. The crews didn't always have all the resources Israeli film crews have -- the film infrastructure isn't the same in Palestine as it is in Israel. This production was an example of Palestinian cinema taken to a new level."</p>
 
-	<footer class="article footer">
-		<div class="article__tags">
+	<footer class="article__footer">
+		<div class="article__footer__tags">
 			<strong>Tags:</strong> <a href="#">Waleed Zuaiter</a>, <a href="#">Academy Awards</a>, <a href="#">Omar</a>, <a href="#">Cinema</a>
 		</div>
 	</footer>
