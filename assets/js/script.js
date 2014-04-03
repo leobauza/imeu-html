@@ -21,21 +21,23 @@ APP.ns = function (ns_string) {
 }
 
 
-//site navigation
+/**
+ * site navigation (dropdowns)
+ */
 APP.siteNavigation = (function(nav) {
-	
+
 	$( '.site__nav > ul > li').mouseenter(function() {
 		$(this).addClass('expand');
 	});
 	$( '.site__nav > ul > li').mouseleave(function() {
 		$(this).removeClass('expand');
 	});
-	
-	return {};
-	
+
 })();
 
-//isotope tiles
+/**
+ * isotope tiles
+ */
 APP.isotope = (function() {
 
 	if(!$('.tiles').length) {
@@ -44,12 +46,42 @@ APP.isotope = (function() {
 	var
 		$container = $('.tiles')
 	;
-	
+
 	$container.isotope({
 		itemSelector: '.tiles__tile',
 		masonry: {
 			columnWidth: 275 + 25
 		}
+	});
+
+})();
+
+/**
+ * site tabs (global sidebars)
+ */
+APP.tabs = (function () {
+
+	if (!$('.tabs').length) {
+		return;
+	}
+
+	$('.tabs__nav').on('click', 'a', function(e) {
+		e.preventDefault();
+		console.log('something');
+		var
+			$this = $(this);
+			$data = $this.data()
+		;
+
+		if ($this.hasClass('active')) {
+			return;
+		}
+		$this.closest('.tabs__nav').find('.active').removeClass('active');
+		$this.addClass('active');
+
+		$this.closest('.tabs').find('.tabs__content .active').removeClass('active');
+		$this.closest('.tabs').find('.tabs__content [data-tabname=' + $data.tabname + ']').addClass('active');
+
 	});
 
 })();

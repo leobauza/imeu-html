@@ -18,6 +18,9 @@ $tab_text_colour: #757575;
 		text-align: center;
 		color: $tab_text_colour;
 		font-size: 1.5em;
+		&:hover {
+			background: Greyscale(5);
+		}
 		&.active {
 			background: $brand;
 			color: $white;

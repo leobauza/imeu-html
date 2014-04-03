@@ -2,8 +2,8 @@
 	<header class="article__header">
 		<div class="article__header__top">
 			<div class="article__tags">
-				<span class="label--default">Culture</span>
-				<span class="label--default">Film</span>
+				<a href="#" class="label--default">Culture</a>
+				<a href="#" class="label--default">Film</a>
 			</div>
 			<div class="article__social">
 				<?php include($_SERVER['DOCUMENT_ROOT'] . '/inc-globals/add-this.php'); ?>
@@ -11,8 +11,8 @@
 		</div>
 		<h1>New Palestinian film set to screen at International Film Festival in Toronto and New York</h1>
 		<footer class="article__meta">
-			<span class="date">September 5, 2012</span>
-			<span class="author">Noam Sheizaf</span>
+			<span class="date"><a href="#">September 5, 2012</a></span>
+			<span class="author"><a href="#">Noam Sheizaf</a></span>
 		</footer>
 	</header>
 

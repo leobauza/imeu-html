@@ -979,6 +979,8 @@ fieldset {
   background: #aab2bd;
   border-color: #aab2bd;
   color: white; }
+  .label--default:hover {
+    color: white; }
 
 /* app/libs/tab */
 .tabs__nav {
@@ -1002,6 +1004,8 @@ fieldset {
     text-align: center;
     color: #757575;
     font-size: 1.5em; }
+    .tabs__nav a:hover {
+      background: #f2f2f2; }
     .tabs__nav a.active {
       background: #2f3075;
       color: white; }
@@ -1138,7 +1142,7 @@ fieldset {
   *display: inline;
   zoom: 1;
   _height: 20px;
-  margin: 0; }
+  margin: 0 5px; }
 .tiles__nav a {
   display: block;
   font-size: 1.5em;
@@ -1459,7 +1463,7 @@ body {
 
 .article__tags {
   float: left; }
-  .article__tags span {
+  .article__tags span, .article__tags a {
     margin: 0 10px 0 0; }
 
 .article__social {
@@ -1486,6 +1490,8 @@ body {
     color: #aab2bd;
     background-image: url("../img/sprite_icons.png");
     background-repeat: no-repeat; }
+    .article__meta span a {
+      color: #aab2bd; }
   .article__meta .date {
     background-position: 0px -21px; }
   .article__meta .author {

@@ -1,9 +1,9 @@
 <section class="tabs tabs--site">
 	<nav class="tabs__nav">
-		<a class="active" href="#">Featured</a>
-		<a href="#">Latest</a>
+		<a data-tabname="featured" class="active" href="#">Featured</a>
+		<a data-tabname="latest" href="#">Latest</a>
 	</nav>
-	
+
 	<div class="tabs__content">
 
 		<ul data-tabname="featured" class="tabs__tab list--summary active">
@@ -48,6 +48,6 @@
 			</li>
 		</ul>
 
-	</div> 
-	
+	</div>
+
 </section>

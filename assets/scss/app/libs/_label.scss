@@ -13,4 +13,7 @@
   background: $default;
   border-color: $default;
   color: $white;
+  &:hover {
+    color: $white;
+  }
 }

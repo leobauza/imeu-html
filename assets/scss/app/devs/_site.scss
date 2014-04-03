@@ -52,7 +52,7 @@ body {
 }
 .article__tags {
 	float: left;
-	span {
+	span, a {
 		margin: 0 10px 0 0;
 	}
 }
@@ -73,6 +73,9 @@ body {
 		color: $litestTextColour;
 		background-image: url('../img/sprite_icons.png');
 		background-repeat: no-repeat;
+		a {
+			color: $litestTextColour;
+		}
 	}
 	.date {
 		background-position: 0px -21px;
