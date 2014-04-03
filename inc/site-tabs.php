@@ -28,7 +28,7 @@
 		</ul>
 
 		<ul data-tabname="latest" class="tabs__tab list--summary">
-			<li>
+			<li class="first">
 				<a href="#">
 					<img />
 					<p><strong>Different</strong> United Nations slams Israel demolition of West Bank properties.</p>
@@ -40,7 +40,7 @@
 					<p><strong>Different</strong> United Nations slams Israel demolition of West Bank properties.</p>
 				</a>
 			</li>
-			<li>
+			<li class="last">
 				<a href="#">
 					<img />
 					<p><strong>Different</strong> United Nations slams Israel demolition of West Bank properties.</p>

@@ -54,6 +54,14 @@ APP.isotope = (function() {
 		}
 	});
 
+	function init () {
+		console.log('init of isotope!');
+	}
+
+	return {
+		init: init
+	};
+
 })();
 
 /**
@@ -67,7 +75,6 @@ APP.tabs = (function () {
 
 	$('.tabs__nav').on('click', 'a', function(e) {
 		e.preventDefault();
-		console.log('something');
 		var
 			$this = $(this);
 			$data = $this.data()
@@ -76,12 +83,28 @@ APP.tabs = (function () {
 		if ($this.hasClass('active')) {
 			return;
 		}
-		$this.closest('.tabs__nav').find('.active').removeClass('active');
+
+		$this.closest('.tabs').find('.active').removeClass('active');
+
 		$this.addClass('active');
-
-		$this.closest('.tabs').find('.tabs__content .active').removeClass('active');
 		$this.closest('.tabs').find('.tabs__content [data-tabname=' + $data.tabname + ']').addClass('active');
-
 	});
 
+	function init () {
+		console.log('init of tabs!');
+	}
+
+	return {
+		init: init
+	};
+
 })();
+
+
+for (var key in APP) {
+  if (APP[key] !== undefined) {
+		if(APP.hasOwnProperty(key) && APP[key].hasOwnProperty('init')) {
+			APP[key].init();
+		}
+  }
+}
