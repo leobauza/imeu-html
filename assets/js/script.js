@@ -21,10 +21,11 @@ APP.ns = function (ns_string) {
 }
 
 
+APP.ns('modules');
 /**
  * site navigation (dropdowns)
  */
-APP.siteNavigation = (function(nav) {
+APP.modules.navigation = (function(nav) {
 
 	$( '.site__nav > ul > li').mouseenter(function() {
 		$(this).addClass('expand');
@@ -38,7 +39,7 @@ APP.siteNavigation = (function(nav) {
 /**
  * isotope tiles
  */
-APP.isotope = (function() {
+APP.modules.isotope = (function() {
 
 	if(!$('.tiles').length) {
 		return;
@@ -67,7 +68,7 @@ APP.isotope = (function() {
 /**
  * site tabs (global sidebars)
  */
-APP.tabs = (function () {
+APP.modules.tab = (function () {
 
 	if (!$('.tabs').length) {
 		return;
@@ -76,7 +77,7 @@ APP.tabs = (function () {
 	$('.tabs__nav').on('click', 'a', function(e) {
 		e.preventDefault();
 		var
-			$this = $(this);
+			$this = $(this),
 			$data = $this.data()
 		;
 
@@ -100,11 +101,57 @@ APP.tabs = (function () {
 
 })();
 
+/**
+ * site slider
+ */
+APP.modules.slider = (function () {
 
-for (var key in APP) {
-  if (APP[key] !== undefined) {
-		if(APP.hasOwnProperty(key) && APP[key].hasOwnProperty('init')) {
-			APP[key].init();
+	$('[data-plugin="slider"] .slider__slide').each(function() {
+		var
+			$this = $(this),
+			$index = $this.index(),
+			$classes = ''
+		;
+		if ($index === 0) {
+			$classes = 'active';
+		}
+		$('.slider__pagination .inner').append('<a href="#" class="' + $classes + '">' + $index + '</a>');
+	});
+
+	$('.slider__pagination').on('click', 'a', function (e) {
+
+		e.preventDefault();
+		var
+			$this = $(this),
+			$index = $this.index();
+			$container = $this.closest('[data-plugin="slider"]')
+		;
+
+		$('[data-plugin="slider"]').find('.active').removeClass('active');
+
+		$container.find('.slider__slide:nth-child(' + ($index + 1) + ')').addClass('active');
+		$this.addClass('active');
+
+	});
+
+	function init () {
+		console.log('slider init!');
+	}
+
+	return {
+		init: init
+	};
+
+})();
+
+
+/**
+ * cycle through APP properties with an init method (for no reason in this site)
+ */
+for (var key in APP.modules) {
+  if (APP.modules[key] !== undefined) {
+		if(APP.modules.hasOwnProperty(key) && APP.modules[key].hasOwnProperty('init')) {
+			APP.modules[key].init();
 		}
   }
 }

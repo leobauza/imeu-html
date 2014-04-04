@@ -10,9 +10,13 @@ $slider_text_width: 35%;
 }
 .slider__slide {
 	@include borderRadius(5px);
+	display: none;
 	background: $slider_slide_bg;
 	max-width: 1170px;
 	margin: 0 auto;
+	&.active {
+		display: block;
+	}
 }
 .slider__pagination {
 	position: relative;
