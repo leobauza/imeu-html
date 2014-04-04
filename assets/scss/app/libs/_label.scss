@@ -2,8 +2,9 @@
 %label {
   @include borderRadius(5px);
   @include inlineBlock(32px);
-  padding: 10px 13px;
+  padding: 8px 10px;
   font-size: 15px;
+  line-height: 1;
   border: 1px solid $global-border;
   background: $white;
 }

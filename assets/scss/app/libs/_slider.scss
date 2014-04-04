@@ -2,68 +2,83 @@
 $slider_slide_bg: #5e5e60;
 $slider_text_width: 35%;
 
-.slider--hero {
-	@include boxShadow (0px 0px 10px 0px rgba(0, 0, 0, 0.3));
+%slider {
 	position: relative;
-	background: url('../img/bg_texture.png') repeat;
-	padding: 30px 20px;
-}
-.slider__slide {
-	@include borderRadius(5px);
-	display: none;
-	background: $slider_slide_bg;
-	max-width: 1170px;
-	margin: 0 auto;
-	&.active {
-		display: block;
-	}
-}
-.slider__pagination {
-	position: relative;
-	max-width: 1170px;
-	margin: 0 auto;
-	.inner {
-		position: absolute;
-		top: -48px;
-		left: 0;
-		width: $slider_text_width;
-		text-align: center;
-	}
-	a {
-		display: inline-block;
-		width: 13px;
-		height: 13px;
-		background: url('../img/sprite_slider_nav.png') 100% 0% no-repeat;
-		text-indent: -9999px;
-		margin: 0 8px;
+	.slider__slide {
+		display: none;
 		&.active {
-			background-position: 0% 0%;
+			display: block;
 		}
 	}
 }
-.slide__info {
-	@extend %borderBox;
-	float: left;
-	width: $slider_text_width;
-	padding: 40px 35px;
-	.title {
-		color: $white;
-		margin: 0 0 25px;
-	}
-	p {
-		color: $liteTextColour;
-		margin: 0 0 30px;
-	}
-	.btn--main {
-		display: block;
-		width: 100px;
+
+
+.slider--hero {
+	@extend %slider;
+	@include boxShadow (0px 0px 10px 0px rgba(0, 0, 0, 0.3));
+	background: url('../img/bg_texture.png') repeat;
+	padding: 30px 20px;
+
+	/**
+	 * slider hero specific
+	 */
+	.slider__slide {
+		@include borderRadius(5px);
+		background: $slider_slide_bg;
+		max-width: 1170px;
 		margin: 0 auto;
 	}
-}
-.slide__img {
-	overflow: hidden;
-	@include borderRadius(0 5px 5px 0);
-	img {
-		display: block;
+	.slider__pagination {
+		position: relative;
+		max-width: 1170px;
+		margin: 0 auto;
+		.inner {
+			position: absolute;
+			top: -48px;
+			left: 0;
+			width: $slider_text_width;
+			text-align: center;
+		}
+		a {
+			display: inline-block;
+			width: 13px;
+			height: 13px;
+			background: url('../img/sprite_slider_nav.png') 100% 0% no-repeat;
+			text-indent: -9999px;
+			margin: 0 8px;
+			&.active {
+				background-position: 0% 0%;
+			}
+		}
 	}
+	.slide__info {
+		@extend %borderBox;
+		float: left;
+		width: $slider_text_width;
+		padding: 40px 35px;
+		.title {
+			color: $white;
+			margin: 0 0 25px;
+		}
+		p {
+			color: $liteTextColour;
+			margin: 0 0 30px;
+		}
+		.btn--main {
+			display: block;
+			width: 100px;
+			margin: 0 auto;
+		}
+	}
+	.slide__img {
+		overflow: hidden;
+		@include borderRadius(0 5px 5px 0);
+		img {
+			display: block;
+		}
+	}
+}
+
+.slider--gallery {
+	@extend %slider;
 }

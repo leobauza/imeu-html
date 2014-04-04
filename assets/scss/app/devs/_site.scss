@@ -8,7 +8,7 @@ body {
  */
 .site__body {
 	background: url('../img/bg_search_border.png') 50% 88px repeat-x;
-	.inner {
+	&>.inner {
 		@include group();
 		background: url('../img/bg_site_body.png') 286px 0% repeat-y;
 		max-width: 1170px;
@@ -59,7 +59,7 @@ body {
 .article__social {
 	float: right;
 	width: 138px;
-	padding: 10px 0px;
+	padding: 8px 0px;
 }
 .article__meta {
 	@include group();

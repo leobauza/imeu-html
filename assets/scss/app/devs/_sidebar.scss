@@ -30,7 +30,7 @@ $sidebar_padding: 25px 30px 25px 0px;
 	.tabs {
 		padding: $sidebar_padding;
 	}
-	
+
 	.btn--donate {
 		@extend .btn--success;
 		display: block;
@@ -38,4 +38,22 @@ $sidebar_padding: 25px 30px 25px 0px;
 		margin: 0 30px 40px 0px;
 	}
 
+}
+
+.sidebar__tags {
+	padding: 25px 30px 25px 0px;
+	h4 {
+		padding: 0 0 10px;
+		font-weight: 700;
+		color: $mid_text_colour;
+		border-bottom: 1px solid $tab_border_colour;
+	}
+	.tag-collection {
+		padding: 10px 0 20px;
+		border-bottom: 1px dotted $global_border;
+	}
+	.label--default {
+		font-size: 1.3em;
+		margin: 5px;
+	}
 }

@@ -14,7 +14,7 @@
 
 		</aside>
 		<section class="site__main">
-			<?php include($_SERVER['DOCUMENT_ROOT'] . '/inc/main-content.php'); ?>
+			<?php include($_SERVER['DOCUMENT_ROOT'] . '/inc/gallery-content.php'); ?>
 		</section>
 	</div>
 </section>
