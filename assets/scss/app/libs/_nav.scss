@@ -60,7 +60,7 @@
 			position: relative;
 			float: left;
 			&.first {
-				a {
+				&> a {
 					padding-left: 0;
 				}
 				.sub-menu {
@@ -68,7 +68,7 @@
 				}
 			}
 			&.last {
-				a {
+				&> a {
 					padding-right: 20px;
 					.carat {
 						right: 0px;
@@ -92,6 +92,22 @@
 		}
 	}
 
+	.sub-menu {
+		min-width: 150px;
+		*width: 150px;
+		border: 1px solid $global_border;
+		border-top: none;
+		a {
+			display: block;
+			padding: 10px;
+			color: $textColour;
+			font-size: 1.4em;
+			&:hover {
+				background: $bg_top;
+			}
+		}
+	}
+
 	.carat {
 		position: absolute;
 		top: 47%;
@@ -108,7 +124,7 @@
 	background: $white;
 	z-index: 100;
 	li {
-		
+
 	}
 	a {
 		font-size: 1.2em;
@@ -117,10 +133,9 @@
 
 
 .carat {
-	width: 0; 
-	height: 0; 
+	width: 0;
+	height: 0;
 	border-left: 5px solid transparent;
 	border-right: 5px solid transparent;
 	border-top: 5px solid #fff;
 }
-

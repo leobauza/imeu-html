@@ -25,7 +25,7 @@ APP.ns('modules');
 /**
  * site navigation (dropdowns)
  */
-APP.modules.navigation = (function(nav) {
+APP.modules.navigation = (function () {
 
 	$( '.site__nav > ul > li').mouseenter(function() {
 		$(this).addClass('expand');
@@ -39,7 +39,7 @@ APP.modules.navigation = (function(nav) {
 /**
  * isotope tiles
  */
-APP.modules.isotope = (function() {
+APP.modules.isotope = (function () {
 
 	if(!$('.tiles').length) {
 		return;
@@ -74,7 +74,7 @@ APP.modules.tab = (function () {
 		return;
 	}
 
-	$('.tabs__nav').on('click', 'a', function(e) {
+	$('.tabs__nav').on('click', 'a', function (e) {
 		e.preventDefault();
 		var
 			$this = $(this),
@@ -105,6 +105,10 @@ APP.modules.tab = (function () {
  * site slider
  */
 APP.modules.slider = (function () {
+
+	if (!$('[data-plugin="slider"]').length) {
+		return;
+	}
 
 	$('[data-plugin="slider"] .slider__slide').each(function() {
 		var
