@@ -14,7 +14,7 @@
 
 		</aside>
 		<section class="site__main">
-			<?php include($_SERVER['DOCUMENT_ROOT'] . '/inc/homepage-main.php'); ?>
+			<?php include($_SERVER['DOCUMENT_ROOT'] . '/inc/generic-tiles.php'); ?>
 		</section>
 	</div>
 </section>

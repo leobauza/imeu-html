@@ -29,6 +29,35 @@ body {
 	padding: 30px;
 }
 
+/**
+ * Listings
+ */
+.listing__header {
+	padding: 0 0 25px;
+	h1 {
+		float: left;
+		margin: 0;
+	}
+}
+.listing__social {
+	float: right;
+	padding: 8px 0px;
+	width: 138px;
+}
+.listing__intro {
+	.img {
+		margin-top: 5px;
+		float: left;
+		img {
+			@include borderRadius(5px);
+		}
+	}
+	.text {
+		overflow: hidden;
+		padding: 0 0 0 20px;
+	}
+}
+
 
 /**
  * Articles

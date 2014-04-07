@@ -1,6 +1,8 @@
 /* app/devs/header */
 .site__header {
-	background: $brand;
+	position: relative;
+	z-index: 1;
+	background: $brand_alt;
 }
 
 .header__top {

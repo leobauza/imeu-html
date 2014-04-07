@@ -32,7 +32,7 @@ $sidebar_padding: 25px 30px 25px 0px;
 	}
 
 	.btn--donate {
-		@extend .btn--success;
+		@extend .btn--important;
 		display: block;
 		text-transform: uppercase;
 		margin: 0 30px 40px 0px;

@@ -2,7 +2,7 @@
 %btn{ //placeholder selector!
 	@include inlineBlock(20);
 	@include marpad(0 0 20px, 10px 15px);
-	@include borderRadius(5px);	
+	@include borderRadius(5px);
 	color: $white;
 	//border: 1px solid darken($default, 10);
 	font-size: 1.5em;
@@ -18,7 +18,7 @@
 		border: none;
 	}
 	&:active {
-		
+
 	}
 }
 
@@ -81,9 +81,18 @@
 	//border-color: darken($error, 10);
 	&:hover, &.active {
 		background: darken($error, 10);
-	}	
+	}
 	&:focus {
 		//border: 1px solid darken($error, 10);
+	}
+}
+.btn--important {
+	@extend %btn;
+	@include gradient($important, lighten($important, 2));
+	&:hover, &.active {
+		background: darken($important, 10);
+	}
+	&:focus {
 	}
 }
 
@@ -138,12 +147,6 @@
 	}
 	.btn--error:first-child {
 		border-color: 1px solid darken($error, 10);
-	}	
+	}
 }
 */
-
-
-
-
-
-

@@ -5,7 +5,7 @@ $tile_label_colour: #232323;
 .tiles {
 	@include group();
 }
-.tiles--homepage {
+.tiles--generic {
 	padding: 30px 0px;
 }
 .tiles__tile {
