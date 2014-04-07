@@ -1,10 +1,12 @@
 /* app/libs/slider */
 $slider_slide_bg: #5e5e60;
 $slider_text_width: 35%;
+$slider_border: #f0f0f0;
 
 %slider {
 	position: relative;
 	.slider__slide {
+		@include borderRadius(5px);
 		display: none;
 		&.active {
 			display: block;
@@ -23,7 +25,6 @@ $slider_text_width: 35%;
 	 * slider hero specific
 	 */
 	.slider__slide {
-		@include borderRadius(5px);
 		background: $slider_slide_bg;
 		max-width: 1170px;
 		margin: 0 auto;
@@ -81,4 +82,47 @@ $slider_text_width: 35%;
 
 .slider--gallery {
 	@extend %slider;
+	margin: 0 0 60px;
+	border-bottom: 2px solid $slider_border;
+	.slide__img {
+		@include borderRadius(5px);
+		overflow: hidden;
+	}
+	.slider__pagination {
+		@include borderRadius(0 0 5px 5px);
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		padding: 29px 0px;
+		width: 100%;
+		background: fade-out($black, .30);
+		a {
+			@include inlineBlock(24px);
+			height: 24px;
+			width: 24px;
+			background-image: url('../img/sprite_gallery_slider.png');
+			background-repeat: no-repeat;
+			text-indent: -9999px;
+		}
+		.next-prev {
+			text-align: center;
+		}
+		.prev {
+			background-position: 0px 4px;
+		}
+		.next {
+			background-position: 0px -120px;
+		}
+		.inner {
+			@include inlineBlock(24px);
+			a {
+				background-position: 0px -35px;
+				margin: 0 8px;
+				&.active {
+					background-position: 0px -79px;
+				}
+			}
+		}
+	}
+
 }

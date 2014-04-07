@@ -1,5 +1,7 @@
 var APP = APP || {};
 
+if (!window.console) console = {log: function() {}};
+
 APP.ns = function (ns_string) {
 	var
 		parts = ns_string.split('.'),
@@ -110,6 +112,7 @@ APP.modules.slider = (function () {
 		return;
 	}
 
+	//create pagination
 	$('[data-plugin="slider"] .slider__slide').each(function() {
 		var
 			$this = $(this),
@@ -122,7 +125,8 @@ APP.modules.slider = (function () {
 		$('.slider__pagination .inner').append('<a href="#" class="' + $classes + '">' + $index + '</a>');
 	});
 
-	$('.slider__pagination').on('click', 'a', function (e) {
+	//pagination click
+	$('.slider__pagination .inner').on('click', 'a', function (e) {
 
 		e.preventDefault();
 		var
@@ -132,11 +136,56 @@ APP.modules.slider = (function () {
 		;
 
 		$('[data-plugin="slider"]').find('.active').removeClass('active');
-
 		$container.find('.slider__slide:nth-child(' + ($index + 1) + ')').addClass('active');
 		$this.addClass('active');
 
 	});
+
+	function galleryNavItem (sel, diff) {
+		var that = this;
+
+		$('.slider__pagination').on('click', sel, function (e) {
+			e.preventDefault();
+
+			var
+				$this = $(this);
+				$parent = $this.closest('[data-plugin="slider"]');
+				$current = $parent.find('.slider__slide.active').index() + 1;
+				$slides = $parent.find('.slider__slide').length;
+			;
+
+			that.processClick($parent, $current, diff);
+
+		});
+
+	}
+
+	//process next prev click
+	galleryNavItem.prototype.processClick = function ($parent, $current, diff) {
+		$parent.find('.active').removeClass('active');
+		if ($current === $slides && diff === 1)
+		{
+			$parent.find('.slider__slide:first-child').addClass('active');
+			$parent.find('.slider__pagination .inner a:first-child').addClass('active');
+		}
+		else if ($current === 1 && diff === -1)
+		{
+			$parent.find('.slider__slide:last-child').addClass('active');
+			$parent.find('.slider__pagination .inner a:last-child').addClass('active');
+		}
+		else
+		{
+			$parent.find('.slider__slide:nth-child(' + ($current + diff) + ')').addClass('active');
+			$parent.find('.slider__pagination .inner a:nth-child(' + ($current + diff) + ')').addClass('active');
+		}
+	}
+
+	//next prev click
+	var
+		next = new galleryNavItem('.next', 1);
+		prev = new galleryNavItem('.prev', -1);
+	;
+
 
 	function init () {
 		console.log('slider init!');

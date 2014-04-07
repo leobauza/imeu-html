@@ -1035,6 +1035,9 @@ fieldset {
 .slider--hero, .slider--gallery {
   position: relative; }
   .slider--hero .slider__slide, .slider--gallery .slider__slide {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
     display: none; }
     .slider--hero .slider__slide.active, .slider--gallery .slider__slide.active {
       display: block; }
@@ -1049,9 +1052,6 @@ fieldset {
    * slider hero specific
    */ }
   .slider--hero .slider__slide {
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
     background: #5e5e60;
     max-width: 1170px;
     margin: 0 auto; }
@@ -1095,6 +1095,51 @@ fieldset {
     border-radius: 0 5px 5px 0; }
     .slider--hero .slide__img img {
       display: block; }
+
+.slider--gallery {
+  margin: 0 0 60px;
+  border-bottom: 2px solid #f0f0f0; }
+  .slider--gallery .slide__img {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    overflow: hidden; }
+  .slider--gallery .slider__pagination {
+    -webkit-border-radius: 0 0 5px 5px;
+    -moz-border-radius: 0 0 5px 5px;
+    border-radius: 0 0 5px 5px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 29px 0px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7); }
+    .slider--gallery .slider__pagination a {
+      display: inline-block;
+      *display: inline;
+      zoom: 1;
+      _height: 24px;
+      height: 24px;
+      width: 24px;
+      background-image: url("../img/sprite_gallery_slider.png");
+      background-repeat: no-repeat;
+      text-indent: -9999px; }
+    .slider--gallery .slider__pagination .next-prev {
+      text-align: center; }
+    .slider--gallery .slider__pagination .prev {
+      background-position: 0px 4px; }
+    .slider--gallery .slider__pagination .next {
+      background-position: 0px -120px; }
+    .slider--gallery .slider__pagination .inner {
+      display: inline-block;
+      *display: inline;
+      zoom: 1;
+      _height: 24px; }
+      .slider--gallery .slider__pagination .inner a {
+        background-position: 0px -35px;
+        margin: 0 8px; }
+        .slider--gallery .slider__pagination .inner a.active {
+          background-position: 0px -79px; }
 
 /* app/libs/tile */
 .tiles {
