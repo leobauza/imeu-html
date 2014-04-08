@@ -13,7 +13,7 @@
 			<a href="#" class="btn--donate">Donate to the IMEU</a>
 
 		</aside>
-		<section class="site__main listing">
+		<section class="site__main">
 			<article class="main__content listing">
 				<header class="listing__header">
 					<h1>Culture</h1>

@@ -58,6 +58,40 @@ body {
 	}
 }
 
+/**
+ * Hot Topic
+ */
+.hot-topic__header {
+	h1 {
+		clear: both;
+		padding: 23px 0px 35px 0px;
+		margin: 0;
+	}
+}
+.hot-topic__tags {
+	float: left;
+}
+.hot-topic__social {
+	float: right;
+	padding: 8px 0px;
+	width: 138px;
+}
+.hot-topic__intro {
+	.img {
+		padding: 0 20px 0 0;
+		margin: 0 0 30px;
+		img {
+			@include borderRadius(5px);
+		}
+	}
+	.text {
+		padding: 0 20px 0 0;
+		p {
+			margin: 0;
+		}
+	}
+}
+
 
 /**
  * Articles

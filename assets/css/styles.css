@@ -263,33 +263,33 @@ footer,
   width: 100%; }
   .row > [class*="span"], .row--flush > [class*="span"] {
     float: left;
-    margin-right: 3%; }
+    margin-right: 3.25%; }
     .row > [class*="span"].l, .row--flush > [class*="span"].l {
       margin-right: 0; }
     .row > [class*="span"]:last-child, .row--flush > [class*="span"]:last-child {
       margin-right: 0; }
   .row > .span1, .row--flush > .span1 {
-    width: 5.58332%; }
+    width: 5.35415%; }
   .row > .span2, .row--flush > .span2 {
-    width: 14.16663%; }
+    width: 13.9583%; }
   .row > .span3, .row--flush > .span3 {
-    width: 22.74995%; }
+    width: 22.56245%; }
   .row > .span4, .row--flush > .span4 {
-    width: 31.33327%; }
+    width: 31.1666%; }
   .row > .span5, .row--flush > .span5 {
-    width: 39.91658%; }
+    width: 39.77075%; }
   .row > .span6, .row--flush > .span6 {
-    width: 48.4999%; }
+    width: 48.3749%; }
   .row > .span7, .row--flush > .span7 {
-    width: 57.08322%; }
+    width: 56.97905%; }
   .row > .span8, .row--flush > .span8 {
-    width: 65.66653%; }
+    width: 65.5832%; }
   .row > .span9, .row--flush > .span9 {
-    width: 74.24985%; }
+    width: 74.18735%; }
   .row > .span10, .row--flush > .span10 {
-    width: 82.83317%; }
+    width: 82.7915%; }
   .row > .span11, .row--flush > .span11 {
-    width: 91.41648%; }
+    width: 91.39565%; }
   .row > .span12, .row--flush > .span12 {
     width: 99.9998%; }
 
@@ -1542,6 +1542,34 @@ body {
 .listing__intro .text {
   overflow: hidden;
   padding: 0 0 0 20px; }
+
+/**
+ * Hot Topic
+ */
+.hot-topic__header h1 {
+  clear: both;
+  padding: 23px 0px 35px 0px;
+  margin: 0; }
+
+.hot-topic__tags {
+  float: left; }
+
+.hot-topic__social {
+  float: right;
+  padding: 8px 0px;
+  width: 138px; }
+
+.hot-topic__intro .img {
+  padding: 0 20px 0 0;
+  margin: 0 0 30px; }
+  .hot-topic__intro .img img {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px; }
+.hot-topic__intro .text {
+  padding: 0 20px 0 0; }
+  .hot-topic__intro .text p {
+    margin: 0; }
 
 /**
  * Articles
