@@ -4,6 +4,7 @@
 	@include marpad(0 0 20px, 10px 15px);
 	@include borderRadius(5px);
 	color: $white;
+	border: none;
 	//border: 1px solid darken($default, 10);
 	font-size: 1.5em;
 	text-align: center;
@@ -25,10 +26,10 @@
 //button types (using BEM syntax)
 .btn--default {
 	@extend %btn;
-	background: none;
-	color: $textColour;
+	background: $default;
+	color: $white;
 	&:hover, &.active {
-		background: $default;
+		background: darken($default, 10);
 	}
 }
 .btn--main {

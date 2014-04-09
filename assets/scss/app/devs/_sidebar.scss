@@ -58,6 +58,24 @@ $sidebar_padding: 25px 30px 25px 0px;
 	}
 }
 
+.sidebar__form {
+	padding: 25px 30px 25px 0px;
+	form {
+		border-bottom: 1px dotted $global_border;
+	}
+	h4 {
+		padding: 0 0 10px;
+		margin: 0 0 20px;
+		font-weight: 700;
+		color: $mid_text_colour;
+		border-bottom: 1px solid $tab_border_colour;
+	}
+	label {
+		font-weight: normal;
+		color: $litestTextColour;
+	}
+}
+
 @media (max-width: $tablet_landscape) {
 	.site__sidebar {
 		display: none;

@@ -811,6 +811,7 @@ fieldset {
   -moz-border-radius: 5px;
   border-radius: 5px;
   color: white;
+  border: none;
   font-size: 1.5em;
   text-align: center;
   cursor: pointer; }
@@ -822,10 +823,10 @@ fieldset {
     border: none; }
 
 .btn--default {
-  background: none;
-  color: #434a54; }
+  background: #aab2bd;
+  color: white; }
   .btn--default:hover, .btn--default.active {
-    background: #aab2bd; }
+    background: #8d98a7; }
 
 .btn--main {
   background: #32337c;
@@ -1889,6 +1890,20 @@ body {
   .sidebar__tags .label--default {
     font-size: 1.3em;
     margin: 5px; }
+
+.sidebar__form {
+  padding: 25px 30px 25px 0px; }
+  .sidebar__form form {
+    border-bottom: 1px dotted #e6e9ed; }
+  .sidebar__form h4 {
+    padding: 0 0 10px;
+    margin: 0 0 20px;
+    font-weight: 700;
+    color: #757575;
+    border-bottom: 1px solid #292a66; }
+  .sidebar__form label {
+    font-weight: normal;
+    color: #aab2bd; }
 
 @media (max-width: 1024px) {
   .site__sidebar {
