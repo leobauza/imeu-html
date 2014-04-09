@@ -8,6 +8,7 @@ body {
  */
 .site__body {
 	background: url('../img/bg_search_border.png') 50% 88px repeat-x;
+	clear: both;
 	&>.inner {
 		@include group();
 		background: url('../img/bg_site_body.png') 286px 0% repeat-y;
@@ -207,3 +208,60 @@ body {
 	}
 
 }
+
+/**
+ *responsive
+ */
+@media (max-width: $tablet_landscape) {
+	body {
+		min-width: 0px;
+	}
+	.site__body {
+		background: none;
+		&> .inner {
+			background: none;
+		}
+	}
+	.site__sidebar {
+		display: none;
+	}
+	.site__main {
+		border: none;
+	}
+	.main__content {
+		padding: 30px 0px;
+	}
+} //end tablet_landscape
+
+@media (max-width: $tablet_portrait) {
+
+} //end tablet_portrait
+
+@media (max-width: $phone_landscape) {
+	.listing__intro {
+		.img {
+			float: none;
+			margin: 0 0 20px;
+		}
+		.text {
+			overflow: visible;
+			padding: 0;
+		}
+	}
+
+	.hot-topic__intro {
+		.img {
+			padding: 0;
+			margin: 0 0 20px;
+		}
+		.text {
+			padding: 0;
+			margin: 0 0 20px;
+		}
+	}
+
+} //end phone_landscape
+
+@media (max-width: $phone_portrait) {
+
+} //end phone_portrait

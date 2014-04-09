@@ -3,6 +3,11 @@
 $columns: 12;
 $gutter: 3.25;
 
+//breakpoints
+$tablet_landscape: 1024px;
+$tablet_portrait: 950px;
+$phone_landscape: 700px;
+$phone_portrait: 400px;
 
 //build box
 @mixin square($w,$h) {

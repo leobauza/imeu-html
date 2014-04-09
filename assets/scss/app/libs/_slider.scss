@@ -126,3 +126,62 @@ $slider_border: #f0f0f0;
 	}
 
 }
+
+/**
+ *responsive
+ */
+@media (max-width: $tablet_landscape) {
+	.slider--hero {
+		.slider__slide {
+			@include borderRadius(5px);
+			position: relative;
+			overflow: hidden;
+		}
+		.slide__info {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			padding-bottom: 60px;
+			background: fade-out($black, .50);
+			float: none;
+			width: auto;
+		}
+		.slide__img {
+			overflow: visible;
+			img {
+				width: 100%;
+			}
+		}
+		.slider__pagination {
+			.inner {
+				width: 100%;
+				top: -35px;
+			}
+		}
+	}
+
+} //end tablet_landscape
+
+@media (max-width: $tablet_portrait) {
+
+} //end tablet_portrait
+
+@media (max-width: $phone_landscape) {
+	.slider--hero {
+		.slide__info {
+			position: static;
+			padding: 20px;
+			.title {
+				font-size: 2em;
+				margin: 0 0 10px;
+			}
+			p {
+				margin: 0 0 10px;
+			}
+		}
+	}
+} //end phone_landscape
+
+@media (max-width: $phone_portrait) {
+
+} //end phone_portrait

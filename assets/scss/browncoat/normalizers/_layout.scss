@@ -80,7 +80,7 @@
 
 .row--flush {
 	@extend %rows;
-	
+
 	&> [class*="span"] {
 		margin-right:0;
 	}
@@ -112,8 +112,8 @@
  * Responsive
  */
 
-@media (max-width: 959px) {
-	
+@media (max-width: $phone_landscape) {
+
 	/*margin right instead of margin left to do overflow hidden*/
 	[class*="row"] > [class*="span"] {
 		float: none;
@@ -125,7 +125,6 @@
 	[class*="row"] > [class*="span"]:last-child {
 		overflow: visible;
 	}
-	
-	
-}
 
+
+}

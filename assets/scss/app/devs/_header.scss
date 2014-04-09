@@ -21,3 +21,16 @@
 		display: none;
 	}
 }
+
+/**
+ *responsive
+ */
+@media (max-width: $tablet_landscape) {
+	.site__nav {
+		display: none;
+	}
+} //end tablet_landscape
+
+@media (max-width: $tablet_portrait) {
+
+} //end tablet_portrait

@@ -140,3 +140,18 @@
 	border-right: 5px solid transparent;
 	border-top: 5px solid #fff;
 }
+
+@media (max-width: $phone_landscape) {
+	.top__nav--social {
+		float: none;
+		li {
+			margin: 0 0 0 20px;
+		}
+	}
+	.top__nav {
+		float: none;
+		a {
+			padding: 10px 7px;
+		}
+	}
+} //end tablet_portrait

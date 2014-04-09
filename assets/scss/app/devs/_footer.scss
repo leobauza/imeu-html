@@ -100,3 +100,45 @@ $footer_padding: 40px 0px;
 		color: $footer_list_lite_colour;
 	}
 }
+
+@media (max-width: $tablet_portrait) {
+	.footer__info {
+		float: none;
+		width: auto;
+	}
+	.footer__about {
+		width: auto;
+		padding: 70px 0px 0px 0px;
+	}
+	.footer__contact {
+		padding: 0;
+		li {
+			line-height: 1.6em;
+		}
+	}
+	.footer__nav--social {
+		overflow: visible;
+		padding: 0px 0px 40px;
+		.btn--success {
+			float: none;
+		}
+		ul {
+			float: none;
+		}
+	}
+
+	.end-credits {
+		float: none;
+		padding: 20px 0px;
+		li {
+			border: none;
+			float: none;
+			padding: 0;
+			margin: 0 0 10px;
+			display: block;
+			&.last {
+				margin: 0;
+			}
+		}
+	}
+} //end tablet_portrait

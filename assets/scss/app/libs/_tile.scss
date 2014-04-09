@@ -86,3 +86,15 @@ $tile_label_colour: #232323;
 		}
 	}
 }
+
+@media (max-width: $tablet_landscape) {
+	.tiles__tile {
+		margin: 0 12px 20px 12px;
+	}
+}
+
+@media (max-width: $phone_landscape) {
+	.tiles__tile {
+		margin: 0 0px 20px 0px;
+	}
+}
