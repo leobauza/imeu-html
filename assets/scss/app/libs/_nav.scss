@@ -141,6 +141,55 @@
 	border-top: 5px solid #fff;
 }
 
+@media (max-width: $tablet_landscape) {
+	.site__nav {
+		display: none;
+		background: $black;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		float: none;
+		&.show--nav {
+			display: block;
+		}
+		&> ul {
+			&> li, &>li.first, &>li.last {
+				float: none;
+				border-bottom: 1px solid Greyscale(80);
+				&> a {
+					padding: 0;
+					padding: 10px;
+					.carat {
+						right: 20px;
+					}
+				}
+			}
+		} //end ul
+		.carat {
+			display: none;
+		}
+		.sub-menu {
+			@include boxShadow(none);
+			display: block;
+			position: static;
+			top: auto;
+			left: auto;
+			border: none;
+			background: none;
+			a {
+				color: $liteTextColour;
+				&:hover {
+					background: inherit;
+				}
+			}
+		}
+	} //end site__nav
+
+
+
+} // end tablet_landscape
+
 @media (max-width: $phone_landscape) {
 	.top__nav--social {
 		float: none;

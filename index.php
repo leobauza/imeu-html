@@ -4,6 +4,7 @@
 
 <section class="site__body">
 	<div class="inner">
+
 		<aside class="site__sidebar">
 
 			<?php include($_SERVER['DOCUMENT_ROOT'] . '/inc-globals/search.php'); ?>

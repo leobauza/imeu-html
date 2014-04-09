@@ -754,6 +754,41 @@ fieldset {
   border-right: 5px solid transparent;
   border-top: 5px solid #fff; }
 
+@media (max-width: 1024px) {
+  .site__nav {
+    display: none;
+    background: black;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    float: none; }
+    .site__nav.show--nav {
+      display: block; }
+    .site__nav > ul > li, .site__nav > ul > li.first, .site__nav > ul > li.last {
+      float: none;
+      border-bottom: 1px solid #333333; }
+      .site__nav > ul > li > a, .site__nav > ul > li.first > a, .site__nav > ul > li.last > a {
+        padding: 0;
+        padding: 10px; }
+        .site__nav > ul > li > a .carat, .site__nav > ul > li.first > a .carat, .site__nav > ul > li.last > a .carat {
+          right: 20px; }
+    .site__nav .carat {
+      display: none; }
+    .site__nav .sub-menu {
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+      display: block;
+      position: static;
+      top: auto;
+      left: auto;
+      border: none;
+      background: none; }
+      .site__nav .sub-menu a {
+        color: #d4d5d7; }
+        .site__nav .sub-menu a:hover {
+          background: inherit; } }
 @media (max-width: 700px) {
   .top__nav--social {
     float: none; }
@@ -1167,27 +1202,31 @@ fieldset {
  *responsive
  */
 @media (max-width: 1024px) {
-  .slider--hero .slider__slide {
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-    position: relative;
-    overflow: hidden; }
-  .slider--hero .slide__info {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    padding-bottom: 60px;
-    background: rgba(0, 0, 0, 0.5);
-    float: none;
-    width: auto; }
-  .slider--hero .slide__img {
-    overflow: visible; }
-    .slider--hero .slide__img img {
-      width: 100%; }
-  .slider--hero .slider__pagination .inner {
-    width: 100%;
-    top: -35px; } }
+  .slider--hero {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none; }
+    .slider--hero .slider__slide {
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      position: relative;
+      overflow: hidden; }
+    .slider--hero .slide__info {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding-bottom: 60px;
+      background: rgba(0, 0, 0, 0.5);
+      float: none;
+      width: auto; }
+    .slider--hero .slide__img {
+      overflow: visible; }
+      .slider--hero .slide__img img {
+        width: 100%; }
+    .slider--hero .slider__pagination .inner {
+      width: 100%;
+      top: -35px; } }
 @media (max-width: 700px) {
   .slider--hero .slide__info {
     position: static;
@@ -1468,8 +1507,14 @@ fieldset {
  *responsive
  */
 @media (max-width: 1024px) {
-  .site__nav {
-    display: none; } }
+  .header__main {
+    position: relative; }
+
+  #brand {
+    padding-left: 60px; } }
+@media (max-width: 700px) {
+  #brand {
+    max-width: 50%; } }
 /* app/devs/footer */
 .site__footer {
   background: #3d3d3d; }
@@ -1785,9 +1830,6 @@ body {
     .site__body > .inner {
       background: none; }
 
-  .site__sidebar {
-    display: none; }
-
   .site__main {
     border: none; }
 
@@ -1848,5 +1890,48 @@ body {
     font-size: 1.3em;
     margin: 5px; }
 
+@media (max-width: 1024px) {
+  .site__sidebar {
+    display: none;
+    width: auto;
+    float: none;
+    position: absolute;
+    top: 124px;
+    left: 0;
+    background: white;
+    border: 1px solid #e6e9ed;
+    padding: 20px;
+    z-index: 100; }
+    .site__sidebar.show--sidebar {
+      -webkit-box-shadow: 0px 5px 10px -4px rgba(0, 0, 0, 0.3);
+      -moz-box-shadow: 0px 5px 10px -4px rgba(0, 0, 0, 0.3);
+      box-shadow: 0px 5px 10px -4px rgba(0, 0, 0, 0.3);
+      display: block; } }
 /* app/devs/responsive */
+#twitter-widget-0 {
+  width: 100% !important; }
+
+.toggle--nav, .toggle--sidebar {
+  display: none; }
+  .toggle--nav i, .toggle--sidebar i {
+    display: block;
+    height: 4px;
+    width: 25px;
+    margin: 0 0 3px;
+    background: white; }
+
+@media (max-width: 1024px) {
+  .toggle--nav {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    margin-top: -10px; }
+
+  .toggle--sidebar {
+    display: block;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    margin-top: -10px; } }
 /* app/clients/client */

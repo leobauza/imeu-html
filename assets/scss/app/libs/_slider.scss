@@ -132,6 +132,7 @@ $slider_border: #f0f0f0;
  */
 @media (max-width: $tablet_landscape) {
 	.slider--hero {
+		@include boxShadow(none);
 		.slider__slide {
 			@include borderRadius(5px);
 			position: relative;
